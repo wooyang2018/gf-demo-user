@@ -1,0 +1,27 @@
+### Send POST request with json body
+POST http://localhost:8199/user/sign-up
+Content-Type: application/json
+
+{
+  "nickname": "john",
+  "passport": "test001",
+  "password": "123456",
+  "password2": "123456"
+}
+
+###
+
+# curl -i -d 'passport=test001&password=123456' http://127.0.0.1:8199/user/sign-in
+POST http://127.0.0.1:8199/user/sign-in
+Content-Type: application/x-www-form-urlencoded
+
+passport=test001&password=123456
+
+###
+
+# curl -H 'gfsessionid:14sc9nep0u6yl0cieluexn0n0w2008q7' http://127.0.0.1:8199/user/profile
+GET http://127.0.0.1:8199/user/profile
+gfsessionid: ef2ohr0jy8b4e0clqvnjz6bds0200p4h
+
+###
+

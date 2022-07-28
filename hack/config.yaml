@@ -1,0 +1,15 @@
+gfcli:
+  build:
+    name:     "gf-demo-user"
+    arch:     "amd64"
+    system:   "linux,windows"
+    mod:      ""
+    cgo:      0
+
+  gen:
+    dao:
+    - link:            "mysql:root:991221@tcp(127.0.0.1:3306)/gf-test"
+      tables:          "user"
+      removePrefix:    "gf_"
+      descriptionTag:  true
+      noModelComment:  true
